@@ -1,2 +1,2 @@
 #!/bin/bash
-find hello -user guillaume -exec sudo chown betty {}
+find . -maxdepth 1 -user guillaume -name hello -print0 | xargs -0 sudo chown betty
