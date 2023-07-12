@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f1 <logfile.tsv> | sort | uniq -c | sort -nr | head -n11
+cut -f1 file1.tsv | sort | uniq -c | sort -nr | head -n11
