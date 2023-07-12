@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f1 file1.tsv | sort | uniq -c | sort -nr | head -n11
+awk -F'\t' '{count[$1]++} END{for (ip in count) print count[ip], ip}' <file1.tsv | sort -nr | head -n11 | awk '{print $2, $1}'
